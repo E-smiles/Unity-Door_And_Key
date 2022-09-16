@@ -24,8 +24,8 @@ public class Door : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         //Si je suis bien devant un game objet player alors mon propre game object se désactive
         if(other.CompareTag("Player")){
-            gameObject.SetActive(false);
-            manager.keyIsReached();
+            if(isOpen)
+                manager.DoorIsReached();
         }
 
     }

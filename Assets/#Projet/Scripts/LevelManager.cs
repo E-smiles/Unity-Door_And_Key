@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
     //On déclare une key de type Key
     public Key key;
     public Door door;
+    public string nextLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,11 @@ public class LevelManager : MonoBehaviour
     public void keyIsReached(){
         door.Opening();
     }
+
+    public void DoorIsReached(){
+        SceneManager.LoadScene(nextLevel);
+    }
+
 
     // Update is called once per frame
     void Update()
