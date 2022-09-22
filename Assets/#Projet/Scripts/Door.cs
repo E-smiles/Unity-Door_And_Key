@@ -6,7 +6,8 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     [HideInInspector] public LevelManager manager;
-    [HideInInspector] public bool isOpen = false;
+    //[HideInInspector] 
+    public bool isOpen = false;
     private Animator animator;
 
     void Start(){
