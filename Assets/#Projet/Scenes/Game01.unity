@@ -580,6 +580,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2666394755970344429, guid: 309e9c3546e7ee7448c359097bc5af47, type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 839735075}
+    - target: {fileID: 2666394755970344429, guid: 309e9c3546e7ee7448c359097bc5af47, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2666394756930712521, guid: 309e9c3546e7ee7448c359097bc5af47, type: 3}
       propertyPath: m_Name
       value: Hero
