@@ -22,7 +22,7 @@ public class HeroInputManager : MonoBehaviour
     void Awake()
     {
         actions = new InputManager();
-        //ça va aller chercher mon objet, ça va aller chercher la composante du muvement
+        //ça va aller chercher mon objet, ça va aller chercher la composante du mouvement
         moveAction = actions.Player.Move;
         //Si je ne fais pas ça il ne démarre pas l'action
         moveAction.Enable();
@@ -55,7 +55,7 @@ public class HeroInputManager : MonoBehaviour
     void Update()
     {
         if(IsJumping){
-            rb.AddForce(Vector2.up*400);
+            rb.AddForce(Vector2.up*50); //100
         }
     }
 void FixedUpdate()
@@ -78,12 +78,98 @@ void FixedUpdate()
 
         //Ou en ternaire
         //
-        // if(move.x != 0){
-        // sprite.flix est egale vrai et la condition -> Si movex est différent de zero
+        //  if(move.x != 0){
+        // // sprite.flix est egale vrai et la condition -> Si movex est différent de zero
         //     mySprite.flipX = move.x <0;
-        // 
+        // }
 
 }
 
 
 }
+
+//Test ISGROUNDED
+
+// using System.Collections;
+// using System.Collections.Generic;
+// using UnityEngine;
+// using UnityEngine.InputSystem;
+
+// [RequireComponent(typeof(Rigidbody2D))]
+// [RequireComponent(typeof(Animator))]
+// [RequireComponent(typeof(SpriteRenderer))]
+// public class HeroInputManager : MonoBehaviour
+// {
+//     private InputManager actions;
+//     private InputAction moveAction;
+//     private InputAction jumpAction;
+//     private Rigidbody2D rb;
+//     private Animator animator;
+//     private SpriteRenderer mySprite;
+//     private bool isJumping = false;
+//     private bool isGrounded = false;
+
+//     [SerializeField] private LayerMask groundLayer;
+//     [SerializeField] private Transform groundCheck;
+//     [SerializeField] private float groundCheckRadius = 0.2f;
+//     public float speed = 3;
+
+//     private void Awake()
+//     {
+//         actions = new InputManager();
+//         moveAction = actions.Player.Move;
+//         moveAction.Enable();
+
+//         actions.Player.Jump.Enable();
+
+//         rb = GetComponent<Rigidbody2D>();
+//         animator = GetComponent<Animator>();
+//         mySprite = GetComponent<SpriteRenderer>();
+//     }
+
+//     private void OnEnable()
+//     {
+//         actions.Player.Jump.started += JumpStart;
+//         actions.Player.Jump.canceled += JumpCancel;
+//     }
+
+//     private void OnDisable()
+//     {
+//         actions.Player.Jump.started -= JumpStart;
+//         actions.Player.Jump.canceled -= JumpCancel;
+//     }
+
+//     private void JumpStart(InputAction.CallbackContext context)
+//     {
+//         if (isGrounded)
+//         {
+//             isJumping = true;
+//             rb.AddForce(Vector2.up * 50);
+//         }
+//     }
+
+//     private void JumpCancel(InputAction.CallbackContext context)
+//     {
+//         isJumping = false;
+//     }
+
+//     private void FixedUpdate()
+//     {
+//         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+//         Vector2 move = moveAction.ReadValue<Vector2>() * Time.fixedDeltaTime * speed;
+//         rb.MovePosition(transform.position + (Vector3)move);
+
+//         float velocity = Mathf.Abs(move.x);
+//         animator.SetFloat("Speed", velocity);
+
+//         if (move.x > 0)
+//         {
+//             mySprite.flipX = false;
+//         }
+//         else if (move.x < 0)
+//         {
+//             mySprite.flipX = true;
+//         }
+//     }
+// }
