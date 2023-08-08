@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+//using System.Debug;
 
 //On lui dit qu'on a besoin d'un rigid body (etre sur qu'il soit deja la)
 [RequireComponent(typeof(Rigidbody2D))]
@@ -19,6 +20,16 @@ public class HeroInputManager : MonoBehaviour
     private Animator animator;
     private SpriteRenderer mySprite;
     private bool IsJumping = false;
+    public float jumpforce = 20;
+
+    bool isGrounded;
+    public Transform groundCheck;
+
+    //Depuis Unity je vais définir les éléments qui sont concidérés comme "sols"
+    public LayerMask groundLayer;
+    //Je selectionne ma platforme, je vais sur l'onglet Layer -> créer un new layer -> j'ai ajouté le layer ground -> Je lui assigne -> Je retourne
+    //Dans mon player et dans ma variable Ground Layer je lui assigne le layer ground.
+
     void Awake()
     {
         actions = new InputManager();
@@ -55,12 +66,16 @@ public class HeroInputManager : MonoBehaviour
     void Update()
     {
         if(IsJumping){
-            rb.AddForce(Vector2.up*50); //100
+            rb.AddForce(Vector2.up*jumpforce); //100
         }
     }
 void FixedUpdate()
 //Je vais calculer le mouvement
 {
+    //Je vais regarder grace à la fct overlapcircle si mon empty est bien sur le sol (je dois passer trois parametres car mon bool va toujours me renvoyer true si je ne mets pas un layer masque)
+    isGrounded = Physics2D.OverlapCircle(groundCheck.position, 1, groundLayer);
+    //Debug.log(isGrounded);
+
     //Je vais recupérer le vector2 de mon movaction, il va me donner le déplacement que je vais vouloir faire
     Vector2 move = moveAction.ReadValue<Vector2>() * Time.fixedDeltaTime * speed;
     //Transform.position ça veut dire ma position actuelle
