@@ -294,6 +294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingPlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 1402226682685520132, guid: 5bfc7d3f8e584354c9f031ab48f7573d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2037907862712783959, guid: 5bfc7d3f8e584354c9f031ab48f7573d, type: 3}
       propertyPath: translation.x
       value: 2
@@ -423,6 +427,10 @@ PrefabInstance:
     - target: {fileID: 1774588303122087823, guid: 74e934fb26ada7a4997ad1f3b5c2a65a, type: 3}
       propertyPath: m_Name
       value: Platform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1774588303122087823, guid: 74e934fb26ada7a4997ad1f3b5c2a65a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4901266499461182562, guid: 74e934fb26ada7a4997ad1f3b5c2a65a, type: 3}
       propertyPath: m_RootOrder
@@ -584,6 +592,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform_tree 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5369084463304147885, guid: 3dc38c248ef46fb43a0693e8646529ee, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dc38c248ef46fb43a0693e8646529ee, type: 3}
 --- !u!1001 &1515951440
@@ -596,6 +608,10 @@ PrefabInstance:
     - target: {fileID: 1402226682685520132, guid: 5bfc7d3f8e584354c9f031ab48f7573d, type: 3}
       propertyPath: m_Name
       value: MovingPlatform (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402226682685520132, guid: 5bfc7d3f8e584354c9f031ab48f7573d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2037907862712783959, guid: 5bfc7d3f8e584354c9f031ab48f7573d, type: 3}
       propertyPath: timeToMove
@@ -699,12 +715,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -787,7 +803,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -3.4400024, y: 0.0025024}
+  m_AnchoredPosition: {x: -3.4400635, y: 0.0025024}
   m_SizeDelta: {x: 37.76, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1670477737
@@ -883,6 +899,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform_tree 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5369084463304147885, guid: 3dc38c248ef46fb43a0693e8646529ee, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dc38c248ef46fb43a0693e8646529ee, type: 3}
 --- !u!1001 &2027472150
@@ -895,6 +915,10 @@ PrefabInstance:
     - target: {fileID: 1402226682685520132, guid: 5bfc7d3f8e584354c9f031ab48f7573d, type: 3}
       propertyPath: m_Name
       value: MovingPlatform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1402226682685520132, guid: 5bfc7d3f8e584354c9f031ab48f7573d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2037907862712783959, guid: 5bfc7d3f8e584354c9f031ab48f7573d, type: 3}
       propertyPath: timeToMove
@@ -971,6 +995,10 @@ PrefabInstance:
     - target: {fileID: 1774588303122087823, guid: 74e934fb26ada7a4997ad1f3b5c2a65a, type: 3}
       propertyPath: m_Name
       value: Platform
+      objectReference: {fileID: 0}
+    - target: {fileID: 1774588303122087823, guid: 74e934fb26ada7a4997ad1f3b5c2a65a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4901266499461182562, guid: 74e934fb26ada7a4997ad1f3b5c2a65a, type: 3}
       propertyPath: m_RootOrder
