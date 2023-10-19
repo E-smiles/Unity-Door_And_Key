@@ -307,3 +307,4 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 64
+  fallDetector: {fileID: 0}

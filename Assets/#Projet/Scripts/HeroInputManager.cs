@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+
 
 public class HeroInputManager : MonoBehaviour
 {
@@ -74,7 +76,13 @@ private void OnTriggerEnter2D(Collider2D collision)
 {
     if(collision.tag == "Falldetector")
     {
-        transform.position = respawnPoint;
+        //SI JE VEUX FAIRE APPARAITRE MON PERSO A SON ENDROIT DE DEPART//
+        //transform.position = respawnPoint;
+        
+        //SI JE LE METS JUSTE EN GAME OVER APRES UN FALL//
+        SceneManager.LoadScene("GameOver");
+
+        
         Debug.Log("touché");
     }
 }
