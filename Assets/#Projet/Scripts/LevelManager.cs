@@ -45,10 +45,4 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(nextLevel);
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

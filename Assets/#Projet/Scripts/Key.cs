@@ -6,6 +6,7 @@ public class Key : MonoBehaviour
 {
     //Le manager doit connaitre la clé et la clé doit connaitre le manager
     [HideInInspector] public LevelManager manager;
+
     
     //Vérifier ce qui vient de rentrer est bien le player
     //Désactivé le player au lieu de le détruire

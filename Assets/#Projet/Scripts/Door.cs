@@ -9,14 +9,19 @@ public class Door : MonoBehaviour
     //[HideInInspector] 
     public bool isOpen = false;
     private Animator animator;
+    AudioSource keySound;
 
     void Start(){
         //Va chercher le composant entre les chevrons et vous le ramène
         animator = GetComponent<Animator>();
+        keySound = GetComponent<AudioSource>();
+
     }
 
     public void Opening(){
         isOpen = true;
+        keySound.Play();
+
         //Elle gère l'animator devient true(certain que l'animation va se jouer)
         animator.SetBool("DoorIsOpen", true);
     }
